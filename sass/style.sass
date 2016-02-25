@@ -1,0 +1,111 @@
+@import reset
+@import icons
+
+body, html
+  margin: 0
+  padding: 0
+
+body
+  color: white
+  font-family: HelveticaNeue, Helvetica, Arial, sans-serif
+
+header
+  position: relative
+  padding: 10px
+  background-color: #333333
+  background-image: $icon_menu
+  background-position: center right 20px
+  background-repeat: no-repeat
+  -webkit-background-size: 30px
+  background-size: 30px
+  a
+    position: relative
+    color: white
+    text-decoration: none
+    z-index: 2
+
+  .breadcrumb
+    position: absolute
+    top: 12px
+    width: 120px
+    left: 50%
+    margin-left: -60px
+    text-align: center
+    line-height: 30px
+    color: #777777
+    font-weight: bold
+    z-index: 1
+
+.home
+  height: 35px
+  background-image: $icon_home
+  background-repeat: no-repeat
+  background-size: 35px
+  padding-left: 50px
+  line-height: 35px
+  text-transform: uppercase
+  font-weight: bold
+
+
+.wrapper
+  width: 100%
+  background: #0e4b9d
+  .content
+    font-size: 0
+    div
+      position: relative
+      display: inline-block
+      width: 50%
+      margin: 0
+      text-align: center
+      padding-top: 93px
+      padding-bottom: 30px
+      border: 0
+      border-top: 1px solid #0f3a75
+      border-left: 40px solid #0f3a75
+      font-size: 14px
+      background-repeat: no-repeat
+      background-position: center 20px
+      &:after
+        display: block
+        content: ' '
+        position: absolute
+        width: 25px
+        height: 25px
+        background-image: $icon_info
+        background-repeat: no-repeat
+        -webkit-background-size: 25px
+        background-size: 25px
+        top: 10px
+        left: -33px
+      &.scannable
+        border-left-color: #4ad346
+        &:after
+          background-image: $icon_phone-small
+      &.searchable
+        border-left-color: #1e67cc
+        &:after
+          background-image: $icon_search
+      &.input
+        border-left-color: #bf7914
+        &:after
+          background-image: $icon_pencil
+      &.person
+        background-image: $icon_person
+      &.vehicle
+        background-image: $icon_vehicle
+      &.location
+        background-image: $icon_location
+      &.multimedia
+        background-image: $icon_multimedia
+      &.history
+        background-image: $icon_history
+        background-size: 30%
+      &.dispatch
+        background-image: $icon_dispatch
+      &.disk
+        background-image: $icon_disk
+      &.phone
+        background-image: $icon_phone
+
+@import personpage

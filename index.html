@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<title>MEOS</title>
+
+	<link rel="stylesheet" href="css/style.css"/>
+	<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body ontouchmove="blockMove()">
+	<div class="wrapper">
+		<header>
+			<a href="index.html"><div class="home">Meos</div></a>
+		</header>
+		<div class="content">
+			<div class="person" onclick="document.location = 'person.html';">Persoon</div>
+			<div class="vehicle">Vervoersmiddel</div>
+			<div class="location">Locatie</div>
+			<div class="multimedia">Multimedia</div>
+			<div class="history">Actiehistorie</div>
+			<div class="dispatch">Afhandelen</div>
+			<div class="disk">Opslag</div>
+			<div class="phone">Bellen</div>
+		</div>
+		<script>
+		    window.scrollTo(0,1);
+		    function blockMove() {
+                  event.preventDefault() ;
+            }
+		</script>
+		<script src="js/firebase.js"></script>
+	</div>
+</body>
+</html>
