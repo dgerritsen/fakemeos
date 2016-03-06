@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<title>MEOS</title>
+
+	<link rel="stylesheet" href="css/style.css"/>
+	<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body ontouchmove="blockMove()" ontouchstart="">
+	<div class="wrapper">
+		<header>
+			<a href="index.html"><div class="home">Meos</div></a>
+			<div class="breadcrumb">Handmatig obv document</div>
+		</header>
+		<div class="content">
+			<div class="form">
+				<form>
+					<input type="text" placeholder="Persoonssleutel: AAAAVVJJMMDD" />
+					OF
+					<input type="text" placeholder="Achternaam" />
+					<input type="text" placeholder="Voorletters" />
+					Geboortedatum:
+					<div class="input_date">
+						<input type="text" placeholder="DD" class="input_day"/>
+						<input type="text" placeholder="MM" class="input_month" />
+						<input type="text" placeholder="JJJJ" class="input_year" />
+					</div>
+					<input type="text" placeholder="Geboorteland"/>
+					<div class="checkbox">
+						<label for="foreign">
+							<input id="foreign" type="checkbox"/> Indicatie vreemdeling
+						</label>
+					</div>
+					<input type="reset" />
+					<input type="submit" />
+				</form>
+			</div>
+		</div>
+		<footer>
+			<ul>
+				<li class="back" onclick="document.location = 'person.html';">Vorige</li>
+				<li class="document">Document</li>
+				<li class="person">Persoon</li>
+				<li class="vehicle">Voertuig</li>
+				<li class="duplicate">Neem over</li>
+			</ul>
+		</footer>
+		<script>
+		    window.scrollTo(0,1);
+		    function blockMove() {
+							event.preventDefault() ;
+				}
+
+				var a=document.getElementsByTagName("a");
+				for(var i=0;i<a.length;i++)
+				{
+					a[i].onclick=function()
+					{
+						window.location=this.getAttribute("href");
+						return false
+					}
+				}
+		</script>
+		<script src="js/firebase.js"></script>
+	</div>
+</body>
+</html>

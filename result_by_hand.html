@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<title>MEOS</title>
+
+	<link rel="stylesheet" href="css/style.css"/>
+	<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no" />
+</head>
+<body ontouchmove="blockMove()">
+	<div class="wrapper">
+		<header>
+			<a href="index.html"><div class="home">Meos</div></a>
+			<div class="breadcrumb">Handmatig obv document</div>
+		</header>
+		<div class="content results">
+			<dl>
+				<dt>Identiteit</dt>
+				<dd>D Gerritsen (Dion)</dd>
+
+				<dt>Geboren</dt>
+				<dd>18-09-1995 te Purmerend</dd>
+
+				<dt>Rijbewijsafgifte adres</dt>
+				<dd>Tobagostraat 7, 1448TL Purmerend (Nederland)</dd>
+
+				<dt>Burgerservicenummer</dt>
+				<dd>0123456789</dd>
+			</dl>
+			<div class="result_block">
+				<div class="block_head">
+					Rijbewijs categoriën
+				</div>
+				<div class="block_content"></div>
+			</div>
+
+			<div class="result_block open">
+				<div class="block_head">
+					Rijbewijs
+				</div>
+				<div class="block_content">
+					<dl>
+						<dt>Rijbewijsnummer</dt>
+						<dd>9876543210</dd>
+
+						<dt>Land uitgifte</dt>
+						<dd>Nederland</dd>
+
+						<dt>Datum afgifte</dt>
+						<dd>24-08-2014</dd>
+
+						<dt>Autoriteit afgifte</dt>
+						<dd>Purmerend</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<ul>
+				<li onclick="document.location = 'by_hand.html';">Vorige</li>
+				<li>Document</li>
+				<li class="active" onclick="document.location = 'person.html';">Persoon</li>
+				<li>Vervoermiddel</li>
+				<li>Neem over</li>
+			</ul>
+		</footer>
+		<script>
+		    window.scrollTo(0,1);
+		    function blockMove() {
+							event.preventDefault() ;
+				}
+
+				var a=document.getElementsByTagName("a");
+				for(var i=0;i<a.length;i++)
+				{
+					a[i].onclick=function()
+					{
+						window.location=this.getAttribute("href");
+						return false
+					}
+				}
+		</script>
+		<script src="js/firebase.js"></script>
+	</div>
+</body>
+</html>

@@ -10,27 +10,46 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 </head>
-<body>
+<body ontouchmove="blockMove()">
 	<div class="wrapper person-wrapper">
 		<header>
 			<a href="index.html"><div class="home">Meos</div></a>
 			<div class="breadcrumb">Persoon</div>
 		</header>
-		<div class="content">
+		<div class="menu">
 			<div class="passport scannable">Scan Paspoort</div>
 			<div class="idcard scannable">Scan ID kaart</div>
 			<div class="driver scannable">Scan Rijbewijs</div>
 			<div class="fingerprint scannable">Scan Vingerafdruk</div>
-			<div class="document searchable">Handmatig obv document</div>
+			<div class="document searchable" onclick="document.location = 'by_hand.html';">Handmatig obv document</div>
 			<div class="numbers searchable">Zoek Persoonsnummer</div>
-			<div class="name searchable">Zoek op Naam</div>
+			<div class="name searchable" onclick="document.location = 'by_name.html';">Zoek op Naam</div>
 			<div class="byhand input">Handmatig invoeren</div>
 		</div>
+		<footer>
+			<ul>
+				<li class="back" onclick="document.location = 'index.html';">Vorige</li>
+				<li class="document">Document</li>
+				<li class="person">Persoon</li>
+				<li class="vehicle">Voertuig</li>
+				<li class="duplicate">Neem over</li>
+			</ul>
+		</footer>
 		<script>
-		    window.scrollTo(0,1);
-		    function blockMove() {
-                  event.preventDefault() ;
-            }
+			window.scrollTo(0,1);
+			function blockMove() {
+				event.preventDefault() ;
+			}
+
+			var a=document.getElementsByTagName("a");
+			for(var i=0;i<a.length;i++)
+			{
+				a[i].onclick=function()
+				{
+					window.location=this.getAttribute("href");
+					return false
+				}
+			}
 		</script>
 		<script src="js/firebase.js"></script>
 	</div>

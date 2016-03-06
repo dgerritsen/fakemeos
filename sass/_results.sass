@@ -1,0 +1,45 @@
+.results
+  dl
+    width: 100%
+    padding: 0
+    margin: 0
+  dt, dd
+    display: inline-block
+    margin: 0
+    padding: 0
+    vertical-align: top
+  dt
+    width: 37%
+    margin-right: 10px
+    word-break: break-all
+    overflow: hidden
+    white-space: nowrap
+    -ms-text-overflow: ellipsis
+    text-overflow: ellipsis
+  dd
+    width: 59%
+    font-weight: bold
+
+  .result_block
+    margin-top: 3px
+    .block_head
+      position: relative
+      background: #3c8fd0
+      border: 1px solid #003e63
+      color: #fff
+      padding: 3px 0
+      font-weight: bold
+      &:after, &:before
+        content: " "
+        position: absolute
+      &:after
+        border-bottom: 3px solid #fff
+        border-left: 3px solid #fff
+        height: 6px
+        width: 6px
+        transform: rotateZ(-45deg)
+        right: 10px
+        top: 6px
+    &.open .block_head:after
+      transform: rotateZ(135deg)
+      top: 10px

@@ -14,20 +14,28 @@
 	<div class="wrapper">
 		<header>
 			<a href="index.html"><div class="home">Meos</div></a>
+			<div class="breadcrumb">Handmatig obv document</div>
 		</header>
-		<div class="menu">
-			<div class="person" onclick="document.location = 'person.html';">Persoon</div>
-			<div class="vehicle">Vervoersmiddel</div>
-			<div class="location">Locatie</div>
-			<div class="multimedia">Multimedia</div>
-			<div class="history">Actiehistorie</div>
-			<div class="dispatch">Afhandelen</div>
-			<div class="disk">Opslag</div>
-			<div class="phone">Bellen</div>
+		<div class="content">
+			<div class="form">
+				<form>
+					<div class="select_from_box">
+						<span>Rijbewijsnummer</span>
+					</div>
+					<input type="text" placeholder="Nummer" />
+					<input type="text" value="Nederland" />
+					<input type="reset" value="Wissen" />
+					<input type="submit" value="Zoeken" onclick="event.preventDefault(); document.location = 'result_by_hand.html';"/>
+				</form>
+			</div>
 		</div>
 		<footer>
 			<ul>
-				<li></li>
+				<li class="back" onclick="document.location = 'person.html';">Vorige</li>
+				<li class="document">Document</li>
+				<li class="person">Persoon</li>
+				<li class="vehicle">Voertuig</li>
+				<li class="duplicate">Neem over</li>
 			</ul>
 		</footer>
 		<script>
